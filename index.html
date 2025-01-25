@@ -1,170 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickFit</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickFit - Healthy Living for Busy Schedules</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #ff6b6b;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      background: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        header {
-            text-align: center;
-            padding: 10px;
-            background-color: #4cae4c;
-            color: white;
-        }
+    /* Section Styles */
+    section {
+      padding: 2rem;
+      margin: 1rem;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+    .hidden {
+      display: none;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #5cb85c;
-        }
+    h2 {
+      color: #ff6b6b;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
 
-        nav a {
-            padding: 15px 20px;
-            text-decoration: none;
-            color: white;
-            text-align: center;
-        }
+    /* Footer */
+    footer {
+      background: #ff6b6b;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
 
-        nav a:hover {
-            background-color: #449d44;
-        }
-
-        section {
-            display: none;
-            padding: 20px;
-            background-color: white;
-            margin: 20px;
-            border-radius: 10px;
-        }
-
-        .active {
-            display: block;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        footer {
-            background-color: #4cae4c;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <h1>QuickFit</h1>
-        <p>Stay healthy with your busy schedule</p>
-    </header>
+  <!-- Header -->
+  <header>
+    <h1>QuickFit</h1>
+    <p>Your Healthy Lifestyle Partner</p>
+  </header>
 
-    <nav>
-        <a href="#exercise" onclick="showSection('exercise')">Exercise</a>
-        <a href="#healthy-recipe" onclick="showSection('healthy-recipe')">Healthy Recipes</a>
-        <a href="#chair-yoga" onclick="showSection('chair-yoga')">Chair Yoga</a>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <a href="#" onclick="showSection('exercise')">Exercise</a>
+    <a href="#" onclick="showSection('recipes')">Healthy Recipes</a>
+    <a href="#" onclick="showSection('chairYoga')">Chair Yoga</a>
+  </nav>
 
-    <section id="exercise" class="exercise active">
-        <h2>Exercise</h2>
-        <ul>
-            <li><b>Day 1: Monday (Upper Body)</b></li>
-                <ul>
-                    <li>Push-ups: 3 sets of 10 reps</li>
-                    <li>Arm circles: 3 sets of 10 reps</li>
-                    <li>Tricep dips (using a chair): 3 sets of 10 reps</li>
-                </ul>
-            <li><b>Day 2: Tuesday (Lower Body)</b></li>
-                <ul>
-                    <li>Squats: 3 sets of 10 reps</li>
-                    <li>Calf raises: 3 sets of 15 reps</li>
-                    <li>Glute bridges: 3 sets of 10 reps</li>
-                </ul>
-            <li><b>Day 3: Wednesday (Core)</b></li>
-                <ul>
-                    <li>Plank: 3 sets of 30-second hold</li>
-                    <li>Russian twists (using a medicine ball): 3 sets of 10 reps</li>
-                    <li>Leg raises (hanging leg raises or using a swiss ball): 3 sets of 10 reps</li>
-                </ul>
-            <li><b>Day 4: Thursday (Cardio)</b></li>
-                <ul>
-                    <li>Jumping jacks: 3 sets of 30 seconds</li>
-                    <li>Running in place: 3 sets of 30 seconds</li>
-                    <li>Burpees: 3 sets of 10 reps</li>
-                </ul>
-            <li><b>Day 5: Friday (Yoga)</b></li>
-                <ul>
-                    <li>Downward-facing dog: 3 sets of 30-second hold</li>
-                    <li>Warrior II: 3 sets of 30-second hold (per leg)</li>
-                    <li>Seated forward fold: 3 sets of 30-second hold</li>
-                </ul>
-            <li><b>Day 6: Saturday (Pilates)</b></li>
-                <ul>
-                    <li>Hundred: 3 sets of 30-second hold</li>
-                    <li>Teaser: 3 sets of 10 reps</li>
-                    <li>Leg raises (using a Pilates ball): 3 sets of 10 reps</li>
-                </ul>
-            <li><b>Day 7: Sunday (Stretching)</b></li>
-                <ul>
-                    <li>Hamstring stretch: 3 sets of 30-second hold (per leg)</li>
-                    <li>Chest stretch: 3 sets of 30-second hold</li>
-                    <li>Quad stretch: 3 sets of 30-second hold (per leg)</li>
-                </ul>
-        </ul>
+  <!-- Sections -->
+  <main>
+    <section id="exercise" class="hidden">
+      <h2>Exercise</h2>
+      <ul>
+        <li><strong>Day 1: Monday (Upper Body)</strong>
+          <ul>
+            <li>Push-ups: 3 sets of 10 reps</li>
+            <li>Arm circles: 3 sets of 10 reps</li>
+            <li>Tricep dips (using a chair): 3 sets of 10 reps</li>
+          </ul>
+        </li>
+        <li><strong>Day 2: Tuesday (Lower Body)</strong>
+          <ul>
+            <li>Squats: 3 sets of 10 reps</li>
+            <li>Calf raises: 3 sets of 15 reps</li>
+            <li>Glute bridges: 3 sets of 10 reps</li>
+          </ul>
+        </li>
+        <!-- Add other days similarly -->
+      </ul>
     </section>
 
-    <section id="healthy-recipe" class="healthy-recipe">
-        <h2>Healthy Recipe</h2>
-        <ul>
-            <li><b>Day 1: Quick Overnight Oats</b></li>
-                <ul>
-                    <li>1/2 cup rolled oats</li>
-                    <li>1/2 cup unsweetened almond milk</li>
-                    <li>1/2 banana, sliced</li>
-                    <li>1 tablespoon honey</li>
-                    <li>Pinch of salt</li>
-                    <li>Top with nuts or seeds (optional)</li>
-                </ul>
-            <li>Instruction: Combine all ingredients in a jar or container. Refrigerate overnight and enjoy in the morning.</li>
-            
-            <li><b>Day 2: One-Pot Pasta</b></li>
-                <ul>
-                    <li>1 cup whole wheat pasta</li>
-                    <li>1 cup cherry tomatoes, halved</li>
-                    <li>1 cup frozen spinach</li>
-                    <li>1/4 cup olive oil</li>
-                    <li>1 clove garlic, minced</li>
-                    <li>Salt and pepper to taste</li>
-                    <li>Grated Parmesan cheese (optional)</li>
-                </ul>
-            <li>Instruction: Cook pasta, tomatoes, and spinach in a large pot. Add olive oil, garlic, salt, and pepper. Top with Parmesan cheese, if desired.</li>
-            
-            <li><b>Day 3: Avocado Toast</b></li>
-                <ul>
-                    <li>2 slices whole
+    <section id="recipes" class="hidden">
+      <h2>Healthy Recipes</h2>
+      <ul>
+        <li><strong>Day 1: Quick Overnight Oats</strong>
+          <p>- 1/2 cup rolled oats, 1/2 banana, almond milk, honey, pinch of salt</p>
+          <p>Instructions: Combine in a jar, refrigerate overnight, and enjoy.</p>
+        </li>
+        <li><strong>Day 2: One-Pot Pasta</strong>
+          <p>- Whole wheat pasta, cherry tomatoes, spinach, olive oil, garlic</p>
+          <p>Instructions: Cook all ingredients in a pot and top with Parmesan.</p>
+        </li>
+        <!-- Add other recipes similarly -->
+      </ul>
+    </section>
+
+    <section id="chairYoga" class="hidden">
+      <h2>Chair Yoga</h2>
+      <ul>
+        <li><strong>Day 1: Stress Relief</strong>
+          <ul>
+            <li>Seated deep breathing</li>
+            <li>Shoulder rolls</li>
+            <li>Neck stretches</li>
+          </ul>
+        </li>
+        <li><strong>Day 2: Upper Body</strong>
+          <ul>
+            <li>Seated arm raises</li>
+            <li>Chair push-ups</li>
+            <li>Shoulder blade squeezes</li>
+          </ul>
+        </li>
+        <!-- Add other days similarly -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 QuickFit | Stay Healthy, Stay Fit!</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach(section => {
+        section.classList.add("hidden");
+      });
+      document.getElementById(sectionId).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
