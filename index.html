@@ -3,25 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuickFit - Stay Healthy</title>
+  <title>QuickFit</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #f3f3f3;
     }
 
     header {
-      background-color: #4caf50;
-      color: white;
       text-align: center;
-      padding: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 10px;
+    }
+
+    header h1 {
+      margin: 0;
     }
 
     .container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      background-color: #ffffff;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .box h3 {
+      margin: 0;
+      padding: 15px;
+      color: #4CAF50;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .content {
+      display: none;
+      padding: 15px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .content ul li {
+      margin-bottom: 10px;
+    }
+
+    .box:hover {
+      background-color: #e9f5e9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .box h3 {
+        font-size: 16px;
+      }
+
+      .content {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>QuickFit</h1>
+  <p>Your guide to a healthier lifestyle with a busy schedule!</p>
+</header>
+
+<div class="container">
+  <!-- Exercise Section -->
+  <div class="section" id="exercise">
+    <h2>1. Exercise</h2>
+    <div class="box">
+      <h3>Day 1: Monday (Upper Body)</h3>
+      <div class="content">
+        <ul>
+          <li>Push-ups: 3 sets of 10 reps</li>
+          <li>Arm circles: 3 sets of 10 reps</li>
+          <li>Tricep dips (using a chair): 3 sets of 10 reps</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Day 2: Tuesday (Lower Body)</h3>
+      <div class="content">
+        <ul>
+          <li>Squats: 3 sets of 10 reps</li>
+          <li>Calf raises: 3 sets of 15 reps</li>
+          <li>Glute bridges: 3 sets of 10 reps</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Add other days similarly -->
+  </div>
+
+  <!-- Healthy Recipe Section -->
+  <div class="section" id="recipes">
+    <h2>2. Healthy Recipes</h2>
+    <div class="box">
+      <h3>Day 1: Quick Overnight Oats</h3>
+      <div class="content">
+        <p>Ingredients:</p>
+        <ul>
+          <li>1/2 cup rolled oats</li>
+          <li>1/2 cup unsweetened almond milk</li>
+          <li>1/2 banana, sliced</li>
+          <li>1 tbsp honey</li>
+          <li>Pinch of salt</li>
+        </ul>
+        <p>Instructions: Combine all ingredients in a jar. Refrigerate overnight and enjoy!</p>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Day 2: One-Pot Pasta</h3>
+      <div class="content">
+        <p>Ingredients:</p>
+        <ul>
+          <li>1 cup whole wheat pasta</li>
+          <li>1 cup cherry tomatoes</li>
+          <li>1 cup frozen spinach</li>
+        </ul>
+        <p>Instructions: Cook all ingredients together and serve.</p>
+      </div>
+    </div>
+    <!-- Add other recipes similarly -->
+  </div>
+
+  <!-- Chair Yoga Section -->
+  <div class="section" id="chair-yoga">
+    <h2>3. Chair Yoga</h2>
+    <div class="box">
+      <h3>Day 1: Stress Relief</h3>
+      <div class="content">
+        <ul>
+          <li>Seated deep breathing</li>
+          <li>Shoulder rolls</li>
+          <li>Neck stretches</li>
+          <li>Wrist extensions</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Day 2: Upper Body</h3>
+      <div class="content">
+        <ul>
+          <li>Seated arm raises</li>
+          <li>Chair push-ups</li>
+          <li>Shoulder blade squeezes</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Add other days similarly -->
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 QuickFit. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelectorAll(".box").forEach(box => {
+    box.addEventListener("click", () => {
+      const content = box.querySelector(".content");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>
