@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickFit</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #FFC837, #FF8008);
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #444;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+    }
+    #content {
+      padding: 20px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    h2, h3 {
+      color: #444;
+    }
+    .exercise-list, .recipe-list, .yoga-list {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .responsive-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .responsive-table th, .responsive-table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    @media only screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      .responsive-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>QuickFit</h1>
+  </header>
+  <nav>
+    <a href="#exercises">Exercise</a>
+    <a href="#recipes">Healthy Recipes</a>
+    <a href="#chair-yoga">Chair Yoga</a>
+  </nav>
+
+  <div id="content">
+    <div id="exercises" class="section">
+      <h2>Exercise Plan</h2>
+      <ul class="exercise-list">
+        <li>
+          <h3>Day 1: Monday (Upper Body)</h3>
+          <ul>
+            <li>Push-ups: 3 sets of 10 reps</li>
+            <li>Arm circles: 3 sets of 10 reps</li>
+            <li>Tricep dips (using a chair): 3 sets of 10 reps</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Day 2: Tuesday (Lower Body)</h3>
+          <ul>
+            <li>Squats: 3 sets of 10 reps</li>
+            <li>Calf raises: 3 sets of 15 reps</li>
+            <li>Glute bridges: 3 sets of 10 reps</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Day 3: Wednesday (Core)</h3>
+          <ul>
+            <li>Plank: 3 sets of 30-second hold</li>
+            <li>Russian twists (using a medicine ball): 3 sets of 10 reps</li>
+            <li>Leg raises (hanging leg raises or using a swiss ball): 3 sets of 10 reps</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Day 4: Thursday (Cardio)</h3>
+          <ul>
+            <li>Jumping jacks: 3 sets of 30 seconds</li>
+            <li>Running in place: 3 sets of 30 seconds</li>
+            <li>Burpees: 3 sets of 10 reps</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Day 5: Friday (Yoga)</h3>
+          <ul>
+            <li>Downward-facing dog: 3 sets of 30-second hold</li>
+            <li>Warrior II: 3 sets of 30-second hold (per leg)</li>
+            <li>Seated forward fold: 3 sets of 30-second hold</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Day 6: Saturday (Pilates)</h3>
+          <ul>
+            <li>Hundred: 3 sets of 30-second hold</li>
+            <li>Teaser: 3 sets of 10 reps</li>
+            <li>Leg raises (using a Pilates ball): 3 sets of 10 reps</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Day 7: Sunday (Stretching)</h3>
+          <ul>
+            <li>Hamstring stretch: 3 sets of 30-second hold (per leg)</li>
+            <li>Chest stretch: 3 sets of 30-second hold</li>
+            <li>Quad stretch: 3 sets of 30-second hold (per leg)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="recipes" class="section">
+      <h2>Healthy Recipes</h2>
+      <ul class="recipe-list">
+        <li>
+          <h3>Day 1: Quick Overnight Oats</h3>
+          <table class="responsive-table">
+            <tr><th>Ingredients</th><th>Instructions</th></tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>1/2 cup rolled oats</li>
+                  <li>1/2 cup unsweetened almond milk</li>
+                  <li>1/2 banana, sliced</li>
+                  <li>1 tablespoon honey</li>
+                  <li>Pinch of salt</li>
+                  <li>Top with nuts or seeds (optional)</li>
+                </ul>
+              </td>
+              <td>Combine all ingredients in a jar or container. Refrigerate overnight and enjoy in the morning.</td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h3>Day 2: One-Pot Pasta</h3>
+          <table class="responsive-table">
+            <tr><th>Ingredients</th><th>Instructions</th></tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>1 cup whole wheat pasta</li>
+                  <li>1 cup cherry tomatoes, halved</li>
+                  <li>1 cup frozen spinach</li>
+                  <li>1/4 cup olive oil</li>
+                  <li>1 clove garlic, minced</li>
+                  <li>Salt and pepper to taste</li>
+                  <li>Grated Parmesan cheese (optional)</li>
+                </ul>
+              </td>
+              <td>Cook pasta, tomatoes, and spinach in a large pot. Add olive oil, garlic, salt, and pepper. Top with Parmesan cheese, if desired.</td>
+            </tr>
+          </table>
+        </li>
+        <!-- Include additional recipe days similarly -->
+      </ul>
+    </div>
+
+    <div id="chair-yoga" class="section">
+      <h2>Chair Yoga</h2>
+      <ul class="yoga-list">
+        <li>
+          <h3>Day 1: Stress Relief</h3>
+          <ul>
+            <li>Seated deep breathing</li>
+            <li>Shoulder rolls</li>
+            <li>Neck stretches</li>
+            <li>Wrist extensions</li>
+            <li>Final relaxation</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Day 2: Upper Body</h3>
+          <ul>
+            <li>Seated arm raises</li>
+            <li>Chair push-ups</li>
+            <li>Shoulder blade squeezes</li>
+            <li>Chest stretches</li>
+            <li>Final relaxation</li>
+          </ul>
+        </li>
+        <!-- Include additional yoga days similarly -->
